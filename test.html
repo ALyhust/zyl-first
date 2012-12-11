@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+    <head>
+        <title>帮客网</title>        
+        <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="underscore-min.js"></script>
+		<script type="text/javascript" src="backbone-min.js"></script>
+		<script type="text/javascript" src="mustache.js"></script>
+		<script type="text/javascript" src="test.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var taskListView=new TaskListView();
+				taskListView.loadTasks();
+				taskListView.render();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="canvas">
+			
+		</div>
+		<script id="test-container-template" type="text/template">
+           <span class="title">任务标题</span>
+           <span class="bonus">实付/应付金额</span>
+           <span class="countdown">时间</span> 
+           <span class="task_state">
+           <select>
+            <option>任务状态</option>
+           </select>
+           </span>
+           <span class="action">操作</span>
+           <span class="service">{{name}}</span>
+		</script>
+	</body>
+</html>
